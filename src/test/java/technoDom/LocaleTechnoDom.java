@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class LocaleTechnoDom {
 
+
     @BeforeAll
     static void simpleTest() {
         Configuration.browserSize = "1920x1080";
@@ -30,8 +31,8 @@ public class LocaleTechnoDom {
 
     static Stream<Arguments> technoDomButtons() {
         return Stream.of(
-                Arguments.of(Locale.Қаз, List.of("Таңдаулы", "Салыстыру", "Хабарламалар", "Қоржын", "Кіру")),
-                Arguments.of(Locale.Рус, List.of("Избранное", "Сравнить", "Уведомления", "Корзина", "Вход"))
+                Arguments.of(Locale.KZ.getDesc(), List.of("Таңдаулы", "Салыстыру", "Хабарламалар", "Қоржын", "Кіру")),
+                Arguments.of(Locale.RU.getDesc(), List.of("Избранное", "Сравнить", "Уведомления", "Корзина", "Вход"))
         );
     }
 
