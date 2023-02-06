@@ -36,8 +36,8 @@ public class LocaleTechnoDom {
     }
 
     @MethodSource
-    @ParameterizedTest(name = "Проверка корректности локали меню {0}")
-    @Tags({@Tag("Major"), @Tag("UI_TEST")})
+    @ParameterizedTest(name =  "Для локализации {0} отображаются кнопки {1}")
+    @Tags({@Tag("Critical"), @Tag("UI_TEST")})
     void technoDomButtons(
             Locale locale,
             List<String> buttons

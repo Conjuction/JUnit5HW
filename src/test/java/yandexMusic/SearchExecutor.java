@@ -25,7 +25,7 @@ public class SearchExecutor {
     })
 
     @ParameterizedTest(name = "В выпадающем списке должен быть исполнитель {1} при вводе {0}")
-    @Tags({@Tag("Critical"), @Tag("UI_TEST")})
+    @Tags({@Tag("Critical"), @Tag("Search_TEST")})
     void findMusician(
             String str,
             String Musician

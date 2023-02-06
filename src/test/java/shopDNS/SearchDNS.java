@@ -17,8 +17,6 @@ public class SearchDNS {
     static void simpleTest() {
         Configuration.browserSize = "1920x1080";
         open("https://www.dns-shop.kz/");
-        $(".v-confirm-city__buttons_qv9").$(byText("Сменить город")).click();
-        $(".base-ui-input-search__input_YOW").setValue("Аксу").pressEnter();
     }
 
     @ValueSource(
@@ -26,7 +24,7 @@ public class SearchDNS {
     )
 
     @ParameterizedTest(name = "Наличие выдачи по ключу:{0}")
-    @Tags({@Tag("Critical"), @Tag("UI_TEST")})
+    @Tags({@Tag("Critical"), @Tag("Search_TEST")})
     void searchEquipment(String equipment) {
         $(".presearch__input").setValue(equipment).pressEnter();
         $(".products-list__group-title").shouldHave(text(equipment));
