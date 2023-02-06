@@ -31,8 +31,8 @@ public class LocaleTechnoDom {
 
     static Stream<Arguments> technoDomButtons() {
         return Stream.of(
-                Arguments.of(Locale.KZ.getDesc(), List.of("Таңдаулы", "Салыстыру", "Хабарламалар", "Қоржын", "Кіру")),
-                Arguments.of(Locale.RU.getDesc(), List.of("Избранное", "Сравнить", "Уведомления", "Корзина", "Вход"))
+                Arguments.of(Locale.KZ, List.of("Таңдаулы", "Салыстыру", "Хабарламалар", "Қоржын", "Кіру")),
+                Arguments.of(Locale.RU, List.of("Избранное", "Сравнить", "Уведомления", "Корзина", "Вход"))
         );
     }
 
@@ -45,7 +45,7 @@ public class LocaleTechnoDom {
     ) {
 
         $(".LocalizationSelector_block__QNS8p").click();
-        $(".LocalizationSelector_block__QNS8p").$(byText(locale.name())).click();
+        $(".LocalizationSelector_block__QNS8p").$(byText(locale.getDesc())).click();
         $$(".header-middle__links-wrapper a").filter(visible)
                 .shouldHave(texts(buttons));
 
